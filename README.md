@@ -1,4 +1,4 @@
-# ImageGallery [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-ImageGallery-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/2364)
+# XCTestCase
 A gallery used to host an array of images
 
 You can add one or more images to the gallery
@@ -15,21 +15,21 @@ Palette color types
 
 Supports pinch-to-zoom on the images
 
-ImageGalleryActivity           |  FullScreenImageGallery
+XCTestCaseActivity           |  FullScreenXCTestCase
 :-------------------------:|:-------------------------:
-![](https://raw.githubusercontent.com/lawloretienne/ImageGallery/master/images/ImageGallery_Screenshot7.png)  |  ![](https://raw.githubusercontent.com/lawloretienne/ImageGallery/master/images/ImageGallery_Screenshot8.png)
+![](https://raw.githubusercontent.com/lawloretienne/XCTestCase/master/images/XCTestCase_Screenshot7.png)  |  ![](https://raw.githubusercontent.com/lawloretienne/XCTestCase/master/images/XCTestCase_Screenshot8.png)
 
 ## Setup
 
 #### Gradle
 
-`compile 'com.github.lawloretienne:imagegallery:0.0.15'`
+`compile 'com.github.lawloretienne:XCTestCase:0.0.15'`
 
 #### Maven
 ```
 <dependency>
     <groupId>com.github.lawloretienne</groupId>
-    <artifactId>imagegallery</artifactId>
+    <artifactId>XCTestCase</artifactId>
     <version>0.0.15</version>
 </dependency>
 ```
@@ -37,34 +37,34 @@ ImageGalleryActivity           |  FullScreenImageGallery
 ## Sample Usage
 
 ```java
-Intent intent = new Intent(MainActivity.this, ImageGalleryActivity.class);
+Intent intent = new Intent(MainActivity.this, XCTestCaseActivity.class);
 
 String[] images = getResources().getStringArray(R.array.unsplash_images);
         Bundle bundle = new Bundle();
-        bundle.putStringArrayList(ImageGalleryActivity.KEY_IMAGES, new ArrayList<>(Arrays.asList(images)));
-        bundle.putString(ImageGalleryActivity.KEY_TITLE, "Unsplash Images");
+        bundle.putStringArrayList(XCTestCaseActivity.KEY_IMAGES, new ArrayList<>(Arrays.asList(images)));
+        bundle.putString(XCTestCaseActivity.KEY_TITLE, "Unsplash Images");
         intent.putExtras(bundle);
 
 startActivity(intent);
 ```
 
 
-If you want to use the ImageGalleryActivity you must declare the following in your AndroidManifest.xml .
+If you want to use the XCTestCaseActivity you must declare the following in your AndroidManifest.xml .
 
 ```xml
 
 <!-- Declare this activity in your AndroidManfest.xml -->
 <activity
-    android:name="com.etiennelawlor.imagegallery.library.activities.ImageGalleryActivity"
+    android:name="com.etiennelawlor.XCTestCase.library.activities.XCTestCaseActivity"
     android:configChanges="orientation|keyboardHidden|screenSize"
     android:label=""
-    android:theme="@style/ImageGalleryTheme" />
+    android:theme="@style/XCTestCaseTheme" />
 ```
 
-Alternatively, you can now use the ImageGalleryFragment and host the fragment in your own Activity.
+Alternatively, you can now use the XCTestCaseFragment and host the fragment in your own Activity.
 
 ### Important Note
-You must now set up image loading by implementing these interfaces `ImageGalleryAdapter.ImageThumbnailLoader` and `FullScreenImageGalleryAdapter.FullScreenImageLoader`. See https://github.com/lawloretienne/ImageGallery/blob/master/sample/src/main/java/com/etiennelawlor/imagegallery/activities/MainActivity.java .
+You must now set up image loading by implementing these interfaces `XCTestCaseAdapter.ImageThumbnailLoader` and `FullScreenXCTestCaseAdapter.FullScreenImageLoader`. See https://github.com/lawloretienne/XCTestCase/blob/master/sample/src/main/java/com/etiennelawlor/XCTestCase/activities/MainActivity.java .
 
 
 ## Developed By
@@ -75,7 +75,7 @@ You must now set up image loading by implementing these interfaces `ImageGallery
 
 &nbsp;&nbsp;&nbsp;**Website** - https://medium.com/@etiennelawlor
 
-## Projects/Apps using ImageGallery
+## Projects/Apps using XCTestCase
 
 - <a href="https://play.google.com/store/apps/details?id=com.biggu.shopsavvy&hl=en">ShopSavvy</a>
 
