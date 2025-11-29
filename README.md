@@ -1,4 +1,4 @@
-# XCTestCase
+# Benchmark
 A gallery used to host an array of images
 
 You can add one or more images to the gallery
